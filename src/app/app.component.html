@@ -1,0 +1,54 @@
+<section class="hero is-medium is-info is-bold">
+  <div class="hero-body">
+    <div class="container">
+      <h1 class="title is-1">
+        Customer
+      </h1>
+
+      <h4 class="title" >
+        Your address: 
+        <span class="is-medium has-underline">{{address}}</span>
+      </h4>
+      <h4 class="title">
+        Your balance: 
+        <span class="is-medium has-underline">{{balance}}</span>
+      </h4>
+    </div>
+  </div>
+</section>
+
+<hr>
+<br>
+<div class="container">
+  <h1 class="title">Nạp tài khoản</h1>
+  <div class="field">
+    <label class="label">Giá trị</label>
+    <p class="control">
+      <input [(ngModel)]="value" class="input" type="number" placeholder="9999" name="value">
+    </p>
+  </div>
+
+  <button (click)="addCoin()" class="button is-primary">
+    Nạp tài khoản
+  </button>
+<hr>
+<br>
+  <button (click)="checkAccount()" class="button is-primary">
+    Kiểm tra trạng thái
+  </button>
+</div>
+<br>
+<hr>
+<div class="container">
+  <h1 class="title">Danh sách các phương tiện</h1>
+  <button (click)="getVehicleList()" class="button is-primary">
+    Lấy danh sách phương tiện
+  </button>
+</div>
+<hr>
+<br>
+
+<div class="container">
+  <h1 class="title">Lịch sử giao dịch</h1>
+  
+</div>
