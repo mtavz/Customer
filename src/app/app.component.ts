@@ -11,6 +11,7 @@ import {
 import {
   CustomerService
 } from 'services/customer.service';
+import { delay } from 'q';
 
 @Component({
   selector: 'app-root',
@@ -75,6 +76,21 @@ export class AppComponent {
     }, e => {
       this.setStatus('Error getting balance; see log.')
     })
+  }
+
+  getLogs =() =>{
+    let x = this.vehicleServie.getLogs();
+    console.log(x);
+  }
+
+  getLogs3 =() =>{
+    this.vehicleServie.getLogs3(this.account)
+    .subscribe(value => {
+      console.log(value);
+    }, e => {
+      this.setStatus('Error getting balance; see log.')
+    })
+
   }
   addCoin = () => {
     this.setStatus('Initiating transaction... (please wait)');
